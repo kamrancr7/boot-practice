@@ -1,10 +1,10 @@
-package com.codecity.model;
+package org.example;
 import javax.persistence.*;
 
 
 @Entity
 @Table(name = "users")
-public class User {
+public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -68,7 +68,7 @@ public class User {
 
     // constructors (default and parameterized)
 
-    public User() {
+    public UserModel() {
         // Default constructor
     }
 }

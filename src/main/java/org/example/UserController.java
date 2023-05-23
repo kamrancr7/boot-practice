@@ -1,7 +1,5 @@
-package com.codecity.controller;
+package org.example;
 
-import com.codecity.model.User;
-import com.codecity.repository.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,10 +21,10 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<Map<String, Object>> createUser(@RequestBody User user) {
+    public ResponseEntity<Map<String, Object>> createUser(@RequestBody UserModel user) {
         try {
             System.out.println("in createUser method");
-            User savedUser = userRepository.save(user);
+            UserModel savedUser = userRepository.save(user);
 
             Map<String, Object> response = new HashMap<>();
             response.put("responseCode", 0);
